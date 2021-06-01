@@ -3,5 +3,6 @@
     <a [routerLink]="['/details', t.id]">
       {{ t.name }}
     </a>
+    <button (click)="deleteTask(t.id)">Delete Task</button>
   </li>
 </ul>
