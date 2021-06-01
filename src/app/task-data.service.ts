@@ -14,5 +14,9 @@ export class TaskDataService {
     return this.http.get<Task[]>(this.taskUrl);
   };
 
+  getTaskById = (id: number): Observable<Task> => {
+    return this.http.get<Task>(`${this.taskUrl}/${id}`);
+  };
+
   constructor(private http: HttpClient) {}
 }
